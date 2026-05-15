@@ -3,6 +3,7 @@ import CommentList from '@/components/CommentList'
 import LoginForm from '@/components/LoginForm'
 import Link from 'next/link'
 
+// Ensure this page is always rendered on the server at request time
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
 
