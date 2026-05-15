@@ -3,7 +3,8 @@ import CommentList from '@/components/CommentList'
 import LoginForm from '@/components/LoginForm'
 import Link from 'next/link'
 
-export const revalidate = 30
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default async function AdminPage() {
   const user = await getUser()
