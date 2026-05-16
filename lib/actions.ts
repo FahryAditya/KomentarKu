@@ -3,19 +3,12 @@
 import { createClient } from '@supabase/supabase-js'
 import { revalidatePath } from 'next/cache'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.error('CRITICAL: Supabase environment variables are missing! Check your .env.local file.')
-}
-
 const supabase = createClient(
-  supabaseUrl || '',
-  supabaseAnonKey || '',
+  process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co',
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder',
   {
     auth: {
-      persistSession: false, // Server actions don't need persistent sessions in the client object
+      persistSession: false,
     },
   }
 )

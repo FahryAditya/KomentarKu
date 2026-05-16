@@ -3,6 +3,7 @@ import CommentForm from '@/components/CommentForm'
 import CommentList from '@/components/CommentList'
 import Link from 'next/link'
 
+export const dynamic = 'force-dynamic'
 export const revalidate = 30 // Cache data for 30 seconds to save database resources
 
 export default async function Home() {
