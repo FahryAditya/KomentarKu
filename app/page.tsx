@@ -73,7 +73,7 @@ export default async function Home() {
         </div>
 
         <footer className="page-footer">
-          <p>Dibuat dengan ❤️ menggunakan Next.js + Supabase</p>
+          <p> Di Buat Oleh Mimin Artemis</p>
         </footer>
       </div>
     </main>
